@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <h1>Blue Box Instructions</h1>
+
+<h3>Quick Start</h3>
+<p>
+<ol>
+<li>From C*NET or Phreaknet, dial 832-8888.
+<li>You should hear a "no such number" recording.
+<li><i>Note: even if you don't hear the recording, as long as the call completes, you should be fine</i>
+<li>Hold your blue box speaker up to your phone and send 2600hz for 1 second.
+<li>Dial KP+2+0114. You should hear a ringback tone.
+<li>Congratulations! It worked!
+</ol>
+
+<br/>
+
+<h3 id="wtf">How this works</h3>
+<ul>
+<p>
+
+Calling 832-8888 causes Asterisk to complete your call over a special trunk group to the 1XB. 
+This trunk group is "long distance", and uses <a href="https://www.telecomarchive.com/docs/bsp-archive/975/975-240-100_I3.pdf">
+E-signaling units</a> to convert the normal DC supervisory signals to AC (2600hz) signals. This is the equipment that was historically
+used on long distance trunks, as normal interoffice DC signaling can not pass through carrier equipment, repeaters, etc.
+</br>
+</br>
+The trunks that you're accessing terminate in the No. 1 Crossbar, where they are converted back to traditional DC signaling that
+the switch understands. But the magic happens in the middle--2600hz is sent over the trunks when they are <i>on-hook</i>, which we
+can take advantage of! By placing a call to a non-supervising announcment line, you are effectively making an unbillable call. As
+soon as the announcement picks up, you can send 2600hz down the line, which tells the distant E-signaling unit that you have hung up--
+except that you havent! Now, when the 2600hz tone stops, the E-signaling unit on the far end thinks the trunk has been seized,
+and sends a DC signal to the No. 1 Crossbar to take the trunk off off-hook and attach a sender. Now you're ready for some remote code
+execution ;)
+</br>
+</br>
+While the sender is listening (you only have about 15-20 seconds here), you can dial KP+2+<a href="http://witch.spmh.us/disa">[the last 4 of any working number]</a> in the 1XB. If you mess up, just send 2600hz again, and the trunk will hang up, and pick up, and you'll get a new sender. 
+</br>
+</br>
+No ST pulse is necessary here, because the senders in the 1XB only allow KP+5 digits. No more, no less. They will just ignore a ST pulse if you send one.
+</br></br>
+Finally, this will not work on mobile. We have tried, but the compression and codec nastiness that is inherent to mobile phones just destroys the tone clarity and volume. We've made it work once, but the tones had to be very loud to be picked up clearly. Best to use a landline phone, or at least a decent VoIP phone, if you can.
+
+</ul>
+</br>
+<p>
+By <a href="http://witch.spmh.us">Sarah Autumn</a>
+</body>
+</html>

@@ -1,0 +1,67 @@
+/* stole this css from astrid.smith.seattle.wa.us and
+moified it to suit my tastes. i am not clever */
+
+body {
+	max-width: 40em;
+	margin: 3em 3em 0em 3em;
+	padding-left: 1em;
+	color: #ddd;
+	background: #12110f;
+	border-left: 0.5em solid #444;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+h1 {
+	border-bottom: 1px solid #4b00ff;
+	left: 3em;
+	right: 3em;
+	margin-left: -1em;
+	margin-right: -1em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+#footer {
+	border-top: 1px solid #4b00ff;
+	background: #12110f;
+	width: 100%;
+	position: sticky;
+	left: 3em;
+	right: 3em;
+	height: 4em;
+	margin-left: -1em;
+	margin-right: -1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0;
+	padding-bottom: 0;
+	bottom: 0;
+}
+hr {
+	/* some browsers use 'color' for styling horizontal rules.
+	   meanwhile, others use 'background', because fuck you. */
+	color: #ff4f00;
+	background: #ff4f00;
+}
+a {
+	color: #ad6fff;
+}
+a :visited {
+	color: #c63e00;
+}
+.bg {
+    background: #333333;
+}
+.primaryaccent {
+    color: #4b00ff;
+}
+.accent {
+    color: #56aaff;
+}
+.accentbg {
+    background: #56aaff;
+}
+p {
+	font-size: 0.8em
+}
+li {
+	font-size: 0.8em
+}
