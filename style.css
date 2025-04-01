@@ -78,24 +78,6 @@ h1::after {
 	font-family: 'Cooper Capitals';
 }
 
-h1#title {
-}
-h1#title::before {
-	content: 'Sarah Autumn';
-}
-h1#title::after {
-	content: 'Sarah Autumn';
-}
-
-h1#library {
-}
-h1#library::before {
-	content: 'Switching Library';
-}
-h1#library::after {
-	content: 'Switching Library';
-}
-
 h2 {
 	font-family: 'Cooper Old Style';
 	color: #F9CF55;
@@ -121,6 +103,17 @@ hr {
 	   meanwhile, others use 'background', because fuck you. */
 	color: #F9CF55;
 	background: #F9CF55;
+	border-color: #F9CF55;
+	border-block-color: #F9CF55;
+	border-style:  solid;
+	margin-bottom: 1em;
+	margin-left: 2em;
+}
+hr:last-of-type {
+	color: #5E1D02;
+	background: #5E1D02;
+	border-color: #5E1D02;
+	border-block-color: #5E1D02;
 }
 a {
 	color: #9DD9D2;
@@ -155,7 +148,4 @@ p:first-of-type::first-letter {
 }
 div p:first-of-type::first-letter {
 	color: #fefb55;
-}
-.footer {
-	color: #9C954F;
 }
