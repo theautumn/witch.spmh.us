@@ -1,74 +1,162 @@
-/* stole this css from astrid.smith.seattle.wa.us and
-moified it to suit my tastes. i am not clever */
+@font-face {
+  font-family: "Cooper Initials";
+  src: url("webfonts/CooperText/webfonts/CooperText/CooperInitials-Medium.eot");
+  src: url("webfonts/CooperText/CooperInitials-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("webfonts/CooperText/CooperInitials-Medium.woff2") format("woff2"),
+    url("webfonts/CooperText/CooperInitials-Medium.woff") format("woff"),
+    url("webfonts/CooperText/CooperInitials-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+@font-face {
+  font-family: "Cooper Ground";
+  src: url("webfonts/CooperText/CooperGround-Medium.eot");
+  src: url("webfonts/CooperText/CooperGround-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("webfonts/CooperText/CooperGround-Medium.woff2") format("woff2"),
+    url("webfonts/CooperText/CooperGround-Medium.woff") format("woff"),
+    url("webfonts/CooperText/CooperGround-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cooper Capitals";
+  src: url("webfonts/CooperText/CooperCapitals-Medium.eot");
+  src: url("webfonts/CooperText/CooperCapitals-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("webfonts/CooperText/CooperCapitals-Medium.woff2") format("woff2"),
+    url("webfonts/CooperText/CooperCapitals-Medium.woff") format("woff"),
+    url("webfonts/CooperText/CooperCapitals-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cooper Old Style";
+  src: url("webfonts/CooperText/CooperOldStyle-Medium.eot");
+  src: url("webfonts/CooperText/CooperOldStyle-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("webfonts/CooperText/CooperOldStyle-Medium.woff2") format("woff2"),
+    url("webfonts/CooperText/CooperOldStyle-Medium.woff") format("woff"),
+    url("webfonts/CooperText/CooperOldStyle-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+html {
+  font-family: "Cooper Old Style", sans-serif;
 }
 
 body {
-	max-width: 40em;
-	margin: 3em 3em 0em 3em;
-	padding-left: 1em;
-	color: #ddd;
-	background: #130e0e;
-	border-left: 0.5em solid #444;
-	font-family: 'Inter var', 'Helvetica Neue', 'IBM Plex Sans', Arial, sans-serif;
-	font-size: 18px;
+  max-width: 40em;
+  margin: 3em 3em 0em 3em;
+  padding-left: 1em;
+  color: #dcd8d0;
+  background: #202927;
+  border-left: 0.5em solid #2f2329;
+  font-family: "Cooper Old Style", "Cooper", "Cooper Black", serif;
+  font-size: 18px;
 }
+
 h1 {
-	border-bottom: 1px solid #392F5A;
-	left: 3em;
-	right: 3em;
-	margin-left: -1em;
-	margin-right: -1em;
-	padding-left: 1em;
-	padding-right: 1em;
+  color: #969b5b;
+  border-bottom: 0.1em solid #d6c363;
+  font-size: 5em;
+  line-height: 0.77em;
+  position: relative;
+  font-family: "Cooper Ground";
 }
-#footer {
-	border-top: 1px solid #4b00ff;
-	background: #12110f;
-	width: 100%;
-	position: sticky;
-	left: 3em;
-	right: 3em;
-	height: 4em;
-	margin-left: -1em;
-	margin-right: -1em;
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-top: 0;
-	padding-bottom: 0;
-	bottom: 0;
+h1::before {
+  color: #4e6b69;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Cooper Initials";
+}
+h1::after {
+  color: #dcd8d0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Cooper Capitals";
+}
+
+h2 {
+  font-family: "Cooper Old Style";
+  color: #f9cf55;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #c63e00;
+}
+h3 {
+  color: #e28739;
+  font-size: 1.5em;
+  border-bottom: 0.1em solid #f8d2b0;
+}
+h3::first-letter {
+  color: #f9b245;
+}
+h4,
+h5,
+h6 {
+  color: #e9babe;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 hr {
-	/* some browsers use 'color' for styling horizontal rules.
+  /* some browsers use 'color' for styling horizontal rules.
 	   meanwhile, others use 'background', because fuck you. */
-	color: #ff4f00;
-	background: #ff4f00;
+  color: #f9cf55;
+  background: #f9cf55;
+  border-color: #f9cf55;
+  border-block-color: #f9cf55;
+  border-style: solid;
+  margin-bottom: 1em;
+  margin-left: 2em;
+}
+hr:last-of-type {
+  color: #5e1d02;
+  background: #5e1d02;
+  border-color: #5e1d02;
+  border-block-color: #5e1d02;
 }
 a {
-	color: #9DD9D2;
+  color: #9dd9d2;
+  text-decoration-color: #45512a;
+  text-decoration-style: wavy;
+  line-height: 1.2em;
+}
+li a {
+  color: #f4d5bd;
 }
 a :visited {
-	color: #c63e00;
+  color: #c63e00;
 }
-.bg {
-    background: #333333;
-}
-.primaryaccent {
-    color: #4b00ff;
-}
-.accent {
-    color: #F4B942;
-}
-.accentbg {
-    background: #56aaff;
+li::marker {
+  color: #97450c;
 }
 p {
-	font-size: 0.8em
+  color: #eee7c0;
 }
-li {
-	font-size: 0.8em
+p,
+ul,
+h4,
+h5 {
+  font-size: 1em;
+  margin-left: 2em;
+}
+p::first-line {
+  color: #eed18d;
+}
+p::first-letter {
+  color: #e9bc4d;
+}
+p:first-of-type::first-letter {
+  color: #f9b245;
+}
+div p:first-of-type::first-letter {
+  color: #fefb55;
 }
