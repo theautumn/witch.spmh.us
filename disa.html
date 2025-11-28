@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DISA Playground</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        h1#library::before {
+            content: "DISA Playground";
+        }
+
+        h1#library::after {
+            content: "DISA Playground";
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="library">DISA Playground</h1>
+
+    <div>
+        <h3>Number 1 Crossbar</h3>
+        <ul>
+            <p>
+
+                832-0018 - Intraoffice, MF, crybaby (no such number tone)</br>
+                832-0102 - Intraoffice, MF, supervision test</br>
+                832-0103 - Intraoffice, MF, 302 set at test frames</br>
+                832-9552 - Intraoffice, MF, busy line</br>
+                <br />
+
+                833-5003 - Intraoffice, RP, Milliwatt (may be loud)</br>
+                833-0114 - Intraoffice, RP, payphone</br>
+                833-0018 - Intraoffice, RP, a real crybaby</br>
+                833-7777 - Intraoffice, RP, No Such Number intercept trunk with recording</br>
+                833-9552 - Intraoffice, RP, busy line</br>
+                <br />
+
+                722-0099 - to Panel, RP, busy/flashing sup</br>
+                722-4580 - to Panel, RP, flashes trouble desk</br>
+                722-5234 - to Panel, RP, Candlestick</br>
+                <br />
+
+                365-4755 - Panel via office tandem, DO, RP, spacesaver</br>
+                365-5999 - Panel via office tandem, DO, RP, ring no answer</br>
+                <br />
+
+                929-xxxx - PCI display @ trouble desk, PCI, quiet term after signalling</br>
+                <br />
+
+                524-6103 - 1XB via panel office tandem, DO, RP, 302 set at test frames.
+                <br />
+                <i>(This is a loop-around trunk from the No. 1 right back to itself.)</i>
+                <br />
+                <br />
+
+                537-1111 - ANAC. Number readback derived from ANI-B spill from 1XB</br>
+                </br>
+
+                311 - Jane Barbe vacant code recording from annoucement machine, or maybe something else if you try hard
+                enough ;) </br>
+                </br>
+
+                844 - Audichron, Time of Day
+                <b><i><span style="color:red">(call and ask us to turn it on)</span></i></b>
+                <br />
+                <br />
+                555 - Vacant code. Should get a recording, or a crybaby tone if you try hard enough.
+                <br />
+                <br />
+                11+NXX-XXXX - Long distance call to any 7 digit
+                <a href="https://portal.phreaknet.org/directory">Phreaknet number</a>
+                <br />
+
+                <b>(NOTE:</b>
+                You might want to read the <a href="#aboutani">About ANI</a> section below.)
+                <br />
+                <br />
+        </ul>
+    </div>
+    <div>
+        <h3>Number 5 Crossbar</h3>
+        <ul>
+            <p>
+                232-0013 - Intraoffice, IAO, test line @ MTC
+                <br />
+                232-0903 - Intraoffice, IAO, payphone in lobby
+                <br />
+                232-1137 - Intraoffice, IAO, ring no answer
+                <br />
+                232-9552 - Intraoffice, IAO, sup test </br>
+                <br />
+                844 - Intraoffice, IAO, Audichron
+                <b>
+                    <i>
+                        <span style="color:red">(call and ask us to turn it on)</span>
+                    </i>
+                </b>
+                </br>
+                <br />
+
+                275-4123 - to Step, DP, trimline on connector shelf
+                <br />
+                275-8988 - to Step, DP, trimline/party line
+                <br />
+                <br />
+                832-xxxx - Interoffice, MF, any 1XB line above
+                <br />
+                <br />
+                722-xxxx - Interoffice, RP, any panel line above
+                <br />
+                <br />
+                537-1111 - ANAC. Number readback derived from ANI-B spill from 5XB diamond ring translator</br>
+                </br>
+                1+NXX-XXXX - Long distance call to any NANP
+                <a href="https://www.ckts.info/directory/nanpa/">C*NET number</a>
+                <br />
+                <br />
+        </ul>
+    </div>
+
+    <div>
+        <h3>About Signalling</h3>
+        <ul>
+            <p>
+                <li>
+                    <u>MF - Multi-Frequency</u>, used by most common-control offices after the 1950s. Eventually replaced older forms of DC
+                    signalling.
+                </li>
+                <br />
+                <li>
+                    <u>RP - Revertive Pulse</u>, used by the panel switch, and later by the Number 1 Crossbar for backward compatibility. On calls to panel, listen for RP after the thousands digit, and all successive digits. On calls to 1XB (833), listen for RP after the hundreds digit and all successive digits.
+                </li>
+                <br />
+                <li>
+                    <u>DO - Distant Office</u>
+                    , not strictly a signalling method, but used to indicate that extra office selections are made prior
+                    to the normal RP selections. On Distant Office calls (365, 524) listen for office selections to start immediately after the 3rd digit is dialed. It will continue after each successive digit. On regular RP calls, the office frame will be skipped.
+                </li>
+                <br />
+                <li>
+                    <u>PCI - Panel Call Indicator</u>, initially used to signal forward to manual 'B' operators. Later used for panel and crossbar tandems. Consists of 20 pulses, each being some combination of heavy, light, negative, positive, neutral.
+                </li>
+                <br />
+                <li>
+                    <u>IAO - Intraoffice Call</u>, also not a signalling method, since intraoffice calls in the 5XB do not "signal" at all. The Completing Marker marks and closes crosspoints without any pulsing necessary.
+                </li>
+                <br />
+                <li>
+                    <u>DP - Dial Pulse</u>, used in Strowger/Step-by-Step/CDO offices of various types. Merely repeats the dialed digits forward just like they came from a rotary dial.
+                </li>
+                <br />
+        </ul>
+    </div>
+    <div>
+        <h3 id="aboutani">About ANI</h3>
+        <ul>
+            <p>
+
+
+                The Number 1 Crossbar ANI-B equipment will perform a calling directory number lookup on all outgoing
+                long distance calls (for instance, to Phreaknet). This lookup happens after the 7 digit MF outpulsing by
+                the subscriber sender. A momentary 5800 hz tone is placed on the sleeve lead, followed by an MF spill of
+                the calling number. Even though the 5800 hz tone is audible on historic recordings, it is not audible at
+                the museum (for now), because the short lengths of our trunks do not provide enough inductive coupling
+                for this kind of artifact to come through. At some point, I'll build some artificial lines to make the
+                tone audible.
+                <br />
+                <br />
+
+                If ANI lookup fails for any reason, you will be directed to an Phreaknet TSP operator for number
+                identification.
+                <br />
+                <br />
+
+        </ul>
+    </div>
+    <p>
+        By
+        <a href="https://witch.1xb.co/">Sarah Autumn</a>
+</body>
+
+</html>
