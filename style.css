@@ -124,8 +124,12 @@ a {
 li a {
   color: #f4d5bd;
 }
-a :visited {
+a:visited {
   color: #c63e00;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 li::marker {
   color: #97450c;
@@ -151,4 +155,22 @@ p:first-of-type::first-letter {
 }
 div p:first-of-type::first-letter {
   color: #fefb55;
+}
+
+@media (max-width: 40em) {
+  body {
+    margin: 1.5em 1.5em 0;
+    padding-left: 0.75em;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
+
+  p,
+  ul,
+  h4,
+  h5 {
+    margin-left: 1em;
+  }
 }
