@@ -50,14 +50,30 @@ body {
 }
 
 h1 {
-  color: #dcd8d0;
+  display: grid;
+  color: #969b5b;
   border-bottom: 0.1em solid #d6c363;
-  font-family: "Cooper Old Style", "Cooper", "Cooper Black", serif;
   font-size: clamp(3rem, 10vw, 5rem);
   font-weight: 500;
-  line-height: 0.95;
-  letter-spacing: 0.015em;
-  text-shadow: 0.035em 0.035em #4e6b69;
+  line-height: 0.77;
+}
+
+.title-layer {
+  grid-area: 1 / 1;
+}
+
+.title-ground {
+  font-family: "Cooper Ground";
+}
+
+.title-initials {
+  color: #4e6b69;
+  font-family: "Cooper Initials";
+}
+
+.title-capitals {
+  color: #dcd8d0;
+  font-family: "Cooper Capitals";
 }
 
 h2 {
