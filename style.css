@@ -50,12 +50,15 @@ body {
 }
 
 h1 {
-  display: grid;
   color: #969b5b;
   border-bottom: 0.1em solid #d6c363;
   font-size: clamp(3rem, 10vw, 5rem);
   font-weight: 500;
   line-height: 0.77;
+}
+
+#title {
+  display: grid;
 }
 
 .title-layer {
