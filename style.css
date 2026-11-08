@@ -1,49 +1,37 @@
 @font-face {
   font-family: "Cooper Initials";
-  src: url("webfonts/CooperText/webfonts/CooperText/CooperInitials-Medium.eot");
-  src: url("webfonts/CooperText/CooperInitials-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("webfonts/CooperText/CooperInitials-Medium.woff2") format("woff2"),
-    url("webfonts/CooperText/CooperInitials-Medium.woff") format("woff"),
-    url("webfonts/CooperText/CooperInitials-Medium.ttf") format("truetype");
+  src: url("webfonts/CooperText/CooperInitials-Medium.woff2") format("woff2"),
+    url("webfonts/CooperText/CooperInitials-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Cooper Ground";
-  src: url("webfonts/CooperText/CooperGround-Medium.eot");
-  src: url("webfonts/CooperText/CooperGround-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("webfonts/CooperText/CooperGround-Medium.woff2") format("woff2"),
-    url("webfonts/CooperText/CooperGround-Medium.woff") format("woff"),
-    url("webfonts/CooperText/CooperGround-Medium.ttf") format("truetype");
+  src: url("webfonts/CooperText/CooperGround-Medium.woff2") format("woff2"),
+    url("webfonts/CooperText/CooperGround-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Cooper Capitals";
-  src: url("webfonts/CooperText/CooperCapitals-Medium.eot");
-  src: url("webfonts/CooperText/CooperCapitals-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("webfonts/CooperText/CooperCapitals-Medium.woff2") format("woff2"),
-    url("webfonts/CooperText/CooperCapitals-Medium.woff") format("woff"),
-    url("webfonts/CooperText/CooperCapitals-Medium.ttf") format("truetype");
+  src: url("webfonts/CooperText/CooperCapitals-Medium.woff2") format("woff2"),
+    url("webfonts/CooperText/CooperCapitals-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Cooper Old Style";
-  src: url("webfonts/CooperText/CooperOldStyle-Medium.eot");
-  src: url("webfonts/CooperText/CooperOldStyle-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("webfonts/CooperText/CooperOldStyle-Medium.woff2") format("woff2"),
-    url("webfonts/CooperText/CooperOldStyle-Medium.woff") format("woff"),
-    url("webfonts/CooperText/CooperOldStyle-Medium.ttf") format("truetype");
+  src: url("webfonts/CooperText/CooperOldStyle-Medium.woff2") format("woff2"),
+    url("webfonts/CooperText/CooperOldStyle-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 html {
@@ -62,25 +50,29 @@ body {
 }
 
 h1 {
+  display: grid;
   color: #969b5b;
   border-bottom: 0.1em solid #d6c363;
-  font-size: 5em;
-  line-height: 0.77em;
-  position: relative;
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 500;
+  line-height: 0.77;
+}
+
+.title-layer {
+  grid-area: 1 / 1;
+}
+
+.title-ground {
   font-family: "Cooper Ground";
 }
-h1::before {
+
+.title-initials {
   color: #4e6b69;
-  position: absolute;
-  top: 0;
-  left: 0;
   font-family: "Cooper Initials";
 }
-h1::after {
+
+.title-capitals {
   color: #dcd8d0;
-  position: absolute;
-  top: 0;
-  left: 0;
   font-family: "Cooper Capitals";
 }
 
@@ -132,8 +124,12 @@ a {
 li a {
   color: #f4d5bd;
 }
-a :visited {
+a:visited {
   color: #c63e00;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 li::marker {
   color: #97450c;
@@ -159,4 +155,22 @@ p:first-of-type::first-letter {
 }
 div p:first-of-type::first-letter {
   color: #fefb55;
+}
+
+@media (max-width: 40em) {
+  body {
+    margin: 1.5em 1.5em 0;
+    padding-left: 0.75em;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
+
+  p,
+  ul,
+  h4,
+  h5 {
+    margin-left: 1em;
+  }
 }

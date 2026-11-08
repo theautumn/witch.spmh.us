@@ -4,19 +4,16 @@
   <head>
     <title>Sarah Autumn</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      h1#title::before {
-        content: "Sarah Autumn";
-      }
-      h1#title::after {
-        content: "Sarah Autumn";
-      }
-    </style>
   </head>
 
   <body>
-    <h1 id="title">Sarah Autumn</h1>
+    <h1 id="title" aria-label="Sarah Autumn">
+      <span class="title-layer title-ground" aria-hidden="true">Sarah<br />Autumn</span>
+      <span class="title-layer title-initials" aria-hidden="true">Sarah<br />Autumn</span>
+      <span class="title-layer title-capitals" aria-hidden="true">Sarah<br />Autumn</span>
+    </h1>
 
     <div>
     <img src="sarah-autumn.jpg" alt="Sarah Autumn" width="700"/>
