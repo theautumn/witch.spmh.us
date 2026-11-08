@@ -1,28 +1,28 @@
 @font-face {
   font-family: "Cooper Initials";
-  src: url("webfonts/CooperText/CooperInitials-Medium.woff2") format("woff2"),
-    url("webfonts/CooperText/CooperInitials-Medium.woff") format("woff");
+  src: url("webfonts/CooperText/CooperInitials-Medium.woff") format("woff"),
+    url("webfonts/CooperText/CooperInitials-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
   font-family: "Cooper Ground";
-  src: url("webfonts/CooperText/CooperGround-Medium.woff2") format("woff2"),
-    url("webfonts/CooperText/CooperGround-Medium.woff") format("woff");
+  src: url("webfonts/CooperText/CooperGround-Medium.woff") format("woff"),
+    url("webfonts/CooperText/CooperGround-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
   font-family: "Cooper Capitals";
-  src: url("webfonts/CooperText/CooperCapitals-Medium.woff2") format("woff2"),
-    url("webfonts/CooperText/CooperCapitals-Medium.woff") format("woff");
+  src: url("webfonts/CooperText/CooperCapitals-Medium.woff") format("woff"),
+    url("webfonts/CooperText/CooperCapitals-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -50,12 +50,15 @@ body {
 }
 
 h1 {
-  display: grid;
   color: #969b5b;
   border-bottom: 0.1em solid #d6c363;
   font-size: clamp(3rem, 10vw, 5rem);
   font-weight: 500;
   line-height: 0.77;
+}
+
+#title {
+  display: grid;
 }
 
 .title-layer {
